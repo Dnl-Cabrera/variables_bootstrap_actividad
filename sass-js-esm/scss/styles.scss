@@ -9,7 +9,6 @@
 // `$body-color` or write more CSS that override's Bootstrap's CSS like so:
 // `body { color: red; }`.
 
-
 //
 // Bring in Bootstrap
 //
@@ -28,13 +27,14 @@
 $enable-gradients: true;
 $enable-shadows: true;
 
-$offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+$offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 
 // Customize some defaults
 $body-color: #333;
 $body-bg: #fff;
-$border-radius: .4rem;
-$success: #7952b3;
+$border-radius: 0.4rem;
+$success: #aa96c9;
+$info: #7952b3;
 
 // Required
 @import "bootstrap/scss/functions";
@@ -55,8 +55,8 @@ $success: #7952b3;
 @import "bootstrap/scss/transitions";
 @import "bootstrap/scss/dropdown";
 // @import "bootstrap/scss/button-group";
-// @import "bootstrap/scss/nav";
-// @import "bootstrap/scss/navbar"; // Requires nav
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar"; // Requires nav
 // @import "bootstrap/scss/card";
 // @import "bootstrap/scss/breadcrumb";
 // @import "bootstrap/scss/accordion";
@@ -69,8 +69,8 @@ $success: #7952b3;
 // @import "bootstrap/scss/toasts";
 @import "bootstrap/scss/modal"; // Requires transitions
 // @import "bootstrap/scss/tooltip";
-@import "bootstrap/scss/popover";
-// @import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/popover";
+@import "bootstrap/scss/carousel";
 // @import "bootstrap/scss/spinners";
 @import "bootstrap/scss/offcanvas"; // Requires transitions
 // @import "bootstrap/scss/placeholders";
@@ -81,7 +81,6 @@ $success: #7952b3;
 // Utilities
 @import "bootstrap/scss/utilities/api";
 
-
 //
 // Custom styles
 //
@@ -90,4 +89,26 @@ $success: #7952b3;
 
 body {
   padding: 1.5rem;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
+.image1 {
+  width: 100%;
+  height: auto;
+}
+
+.boton-active {
+  &:after {
+    content: "Prueba" !important;
+    top: 0px;
+    left: 0px;
+    width: 1000px !important;
+    height: 1000px !important;
+    background: #7952b3;
+    border-radius: 0.4rem;
+    transition: transform 0.3s ease;
+  }
 }
